@@ -22,7 +22,7 @@
                               :before-upload="beforeAvatarUpload">
                               <img   v-if="userInfoObj.avatar" :src="userInfoObj.avatar?userInfoObj.avatar:'static/img/tou.jpg'"  :onerror="$store.state.errorImg" class="avatar">
                               <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-                              <div slot="tip" class="el-upload__tip">点击上传头像，只能上传jpg/png文件，且不超过1mb</div>
+                              <div slot="tip" class="el-upload__tip">点击上传头像，只能上传jpg/png文件，且不超过1mb，每天只能修改一次头像</div>
                             </el-upload>
                         </li>
                         <li class="username">
@@ -31,7 +31,8 @@
                         </li>
                         <li>
                             <span class="leftTitle">电子邮件</span>
-                            <span>{{userInfoObj.email}}</span>
+                            <el-input v-model="userInfoObj.email" placeholder="邮箱"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
+
                         </li>
                         <li>
                             <span class="leftTitle">性别</span>
@@ -79,7 +80,7 @@
                             <span>{{userInfoObj.sex==0?'男':'女'}}</span>
                         </li>
 
-                     
+
                     </ul>
 
                 </section>
