@@ -15,7 +15,7 @@
 						<!--<el-menu-item index="/Reward"><i class="fa fa-wa fa-cny"></i> 赞赏</el-menu-item>-->
 						<el-menu-item index="/Friendslink"><i class="fa fa-wa fa-users"></i>友链</el-menu-item>
 
-						<div class="userInfo">
+            <div class="userInfo">
 							<div v-show="!haslogin" class="nologin">
 								<a href="javascript:void(0);" @click="logoinFun(1)">登录&nbsp;</a>|<a href="javascript:void(0);" @click="logoinFun(0)">&nbsp;注册</a>
 							</div>
