@@ -120,7 +120,7 @@ export default {
       artCommentList: "", //最新评论
       catchMeObj: {
         //个人信息
-        git: "https://gitee.com",
+        git: "https://github.com/moadwq",
         qq: "/static/img/qq.png",
         sina: "https://weibo.com",
         wechat: "/static/img/qq.jpg",
