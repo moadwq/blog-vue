@@ -12,7 +12,6 @@
           alt=""
         />
         <h1 v-if="this.$store.state.themeObj.user_start != 0">
-          <span>请别再呼唤我为孤独之人</span>
         </h1>
       </div>
       <div class="r1-body">
@@ -29,37 +28,37 @@
                 ><i class="fa fa-fw fa-qq"></i
               ></a>
             </el-tooltip>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="微博"
-              placement="top"
-            >
-              <a :href="catchMeObj.sina" target="_blank"
-                ><i class="fa fa-fw fa-weibo"></i
-              ></a>
-            </el-tooltip>
+            <!--<el-tooltip-->
+            <!--  class="item"-->
+            <!--  effect="dark"-->
+            <!--  content="微博"-->
+            <!--  placement="top"-->
+            <!--&gt;-->
+            <!--  <a :href="catchMeObj.sina" target="_blank"-->
+            <!--    ><i class="fa fa-fw fa-weibo"></i-->
+            <!--  ></a>-->
+            <!--</el-tooltip>-->
           </div>
-          <div class="">
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="微信"
-              placement="top"
-            >
-              <a :href="catchMeObj.wechat" target="_blank"
-                ><i class="fa fa-fw fa-wechat"></i
-              ></a>
-            </el-tooltip>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="CSDN"
-              placement="top"
-            >
-              <a :href="catchMeObj.csdn" target="_blank"><i class="">C</i></a>
-            </el-tooltip>
-          </div>
+          <!--<div class="">-->
+          <!--  <el-tooltip-->
+          <!--    class="item"-->
+          <!--    effect="dark"-->
+          <!--    content="微信"-->
+          <!--    placement="top"-->
+          <!--  >-->
+          <!--    <a :href="catchMeObj.wechat" target="_blank"-->
+          <!--      ><i class="fa fa-fw fa-wechat"></i-->
+          <!--    ></a>-->
+          <!--  </el-tooltip>-->
+          <!--  <el-tooltip-->
+          <!--    class="item"-->
+          <!--    effect="dark"-->
+          <!--    content="CSDN"-->
+          <!--    placement="top"-->
+          <!--  >-->
+          <!--    <a :href="catchMeObj.csdn" target="_blank"><i class="">C</i></a>-->
+          <!--  </el-tooltip>-->
+          <!--</div>-->
         </div>
       </div>
     </section>
