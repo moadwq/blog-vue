@@ -33,6 +33,7 @@
                             <span class="leftTitle">电子邮件</span>
                             <el-input v-model="userInfoObj.email" placeholder="邮箱"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
                         </li>
+
                         <li>
                             <span class="leftTitle">性别</span>
                             <template>
@@ -132,7 +133,6 @@ import store from '../store'
                      that.$message.error('昵称为必填项，请填写昵称');
                      return;
                 }
-
 
                 savaUserInfo(that.userInfoObj).then((response)=>{//保存信息接口，返回展示页
                     that.$message.success( '保存成功！');
