@@ -33,6 +33,14 @@
                             <span class="leftTitle">电子邮件</span>
                             <el-input v-model="userInfoObj.email" placeholder="邮箱"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
                         </li>
+                      <li class="username">
+                        <span class="leftTitle">旧密码</span>
+                        <el-input v-model="userInfoObj.password" placeholder="旧密码"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
+                      </li>
+                      <li>
+                        <span class="leftTitle">新密码</span>
+                        <el-input v-model="userInfoObj.newPwd" placeholder="新密码"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
+                      </li>
 
                         <li>
                             <span class="leftTitle">性别</span>
