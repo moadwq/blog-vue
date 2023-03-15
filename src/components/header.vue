@@ -129,16 +129,16 @@ export default {
 					removeToken()
 					localStorage.removeItem('userInfo');
 					that.haslogin = false;
-					window.location.reload();
 						that.$message({
 							type: 'success',
 							message: '退出成功!'
 						});
 					if (that.$route.path == '/UserInfo') {
 						that.$router.push({
-							path: '/'
+							path: '/Home'
 						});
 					}
+          window.location.reload();
 				})
 			}).catch(() => {
 				//
