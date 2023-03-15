@@ -99,8 +99,9 @@
 
 <script>
 import header from '../components/header.vue'
-import {getUserInfo,savaUserInfo} from '../api/user.js'//获取用户信息，保存用户信息
+import {getUserInfo, logout, savaUserInfo} from '../api/user.js'//获取用户信息，保存用户信息
 import store from '../store'
+import {removeToken} from "../utils/auth";
     export default {
         name: 'UserInfo',
         data() { //选项 / 数据
@@ -143,9 +144,22 @@ import store from '../store'
                 }
 
                 savaUserInfo(that.userInfoObj).then((response)=>{//保存信息接口，返回展示页
-                    that.$message.success( '保存成功！');
-                    that.isEdit = false;
-                    that.routeChange() ;
+                    if (response.id == 1){
+                        logout().then((response)=>{
+                            removeToken()
+                            localStorage.removeItem('userInfo');
+                            that.haslogin = false;
+                            if (that.$route.path == '/UserInfo') {
+                                that.$router.push({
+                                    path: '/Login'
+                                });
+                            }
+                        })
+                    } else {
+                        that.$message.success( '修改成功！');
+                        that.isEdit = false;
+                        that.routeChange();
+                    }
                 })
             },
             routeChange: function(){//展示页面信息
