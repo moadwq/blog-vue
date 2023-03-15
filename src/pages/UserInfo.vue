@@ -32,7 +32,6 @@
                         <li>
                             <span class="leftTitle">电子邮件</span>
                             <el-input v-model="userInfoObj.email" placeholder="邮箱"></el-input> <i  class="fa fa-wa fa-asterisk"></i>
-
                         </li>
                         <li>
                             <span class="leftTitle">性别</span>
